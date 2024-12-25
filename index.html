@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's the Spy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Who's the Spy</h1>
+        <div id="lobby" style="display: none;">
+            <h2>Lobby</h2>
+            <button onclick="startGame()">Start Game</button>
+            <div id="players"></div>
+        </div>
+        <div id="game" style="display: none;">
+            <h2>Game Started</h2>
+            <div id="role"></div>
+            <div id="discussion">
+                <p>Discussion time: <span id="timer">300</span> seconds</p>
+                <button onclick="skipDiscussion()">Skip Discussion</button>
+            </div>
+            <div id="voting" style="display: none;">
+                <h3>Vote for the Spy</h3>
+                <div id="voteOptions"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
